@@ -7,7 +7,198 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #e74c3c;
+            --text-light: #ecf0f1;
+            --text-dark: #2c3e50;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            direction: rtl;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        .navbar {
+            background-color: var(--primary-color);
+            padding: 1rem;
+            box-shadow: var(--shadow);
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            padding: 0.5rem 1rem !important;
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            color: var(--accent-color) !important;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--text-light);
+            padding: 5rem 0;
+            margin-bottom: 2rem;
+        }
+
+        .hero-section h1 {
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .player-card, .feature-card {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+            margin-bottom: 20px;
+            background: white;
+            height: 100%;
+            border: none;
+        }
+
+        .player-card:hover, .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .player-card .position-relative {
+            width: 100%;
+            padding-bottom: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .player-card img,
+        .player-card .card-img-top {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-section .position-relative {
+            padding-bottom: 0;
+        }
+
+        .hero-section img {
+            position: relative;
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .card-body {
+            padding: 1.25rem;
+        }
+
+        .price-badge, .vip-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--accent-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-weight: 500;
+        }
+
+        .vip-badge {
+            background: #f1c40f;
+        }
+
+        .rating {
+            color: #f1c40f;
+        }
+
+        .btn {
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+
+        .btn-primary:hover {
+            background-color: #c0392b;
+            border-color: #c0392b;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-light:hover {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+
+        .modal-content {
+            border-radius: 15px;
+            border: none;
+        }
+
+        .modal-header {
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 15px 15px 0 0;
+            border-bottom: none;
+            padding: 1.5rem;
+        }
+
+        .modal-body {
+            padding: 1.5rem;
+        }
+
+        .modal-footer {
+            border-top: none;
+            padding: 1.5rem;
+        }
+
+        .form-control, .form-select {
+            border-radius: 10px;
+            padding: 0.8rem 1rem;
+            border: 1px solid #ddd;
+        }
+
+        .form-control:focus, .form-select:focus {
+            box-shadow: 0 0 0 0.2rem rgba(231, 76, 60, 0.25);
+            border-color: var(--accent-color);
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+                line-height: 1.5;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
