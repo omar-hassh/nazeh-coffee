@@ -1,0 +1,368 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #34495e;
+    --accent-color: #e74c3c;
+    --text-light: #ecf0f1;
+    --text-dark: #2c3e50;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    box-shadow: var(--shadow);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--text-light);
+    padding: 5rem 0;
+    margin-bottom: 2rem;
+}
+
+.hero-section h1 {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+/* Cards */
+.player-card, .feature-card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+    background: white;
+    height: 100%;
+    border: none;
+}
+
+.player-card:hover, .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* تنسيق البطاقات والصور */
+.player-card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+    background: white;
+    height: 100%;
+    border: none;
+}
+
+.player-card .position-relative {
+    width: 100%;
+    padding-bottom: 100%; /* نسبة 1:1 */
+    position: relative;
+    overflow: hidden;
+}
+
+.player-card img,
+.player-card .card-img-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* صور القسم الرئيسي */
+.hero-section .position-relative {
+    padding-bottom: 0;
+}
+
+.hero-section img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+
+.price-badge, .vip-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--accent-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-weight: 500;
+}
+
+.vip-badge {
+    background: #f1c40f;
+}
+
+.rating {
+    color: #f1c40f;
+}
+
+/* Buttons */
+.btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.btn-primary:hover {
+    background-color: #c0392b;
+    border-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+.btn-outline-light:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+/* Modal */
+.modal-content {
+    border-radius: 15px;
+    border: none;
+}
+
+.modal-header {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 15px 15px 0 0;
+    border-bottom: none;
+    padding: 1.5rem;
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.modal-footer {
+    border-top: none;
+    padding: 1.5rem;
+}
+
+/* Forms */
+.form-control, .form-select {
+    border-radius: 10px;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+}
+
+.form-control:focus, .form-select:focus {
+    box-shadow: 0 0 0 0.2rem rgba(231, 76, 60, 0.25);
+    border-color: var(--accent-color);
+}
+
+/* Animations */
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 1rem 0;
+    margin-top: 3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 2rem 0;
+    }
+
+    .hero-section img {
+        max-height: 300px;
+    }
+
+    .player-card {
+        margin: 0.5rem 0;
+    }
+
+    .player-card .position-relative {
+        padding-bottom: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section img {
+        max-height: 200px;
+        margin-top: 1rem;
+    }
+
+    .player-card {
+        margin: 0.25rem 0;
+    }
+}
+
+/* Video Container */
+.ratio {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+/* Contact Info */
+.contact-info i {
+    color: var(--accent-color);
+}
+
+/* Image Optimization for Mobile */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Improved Touch Targets for Mobile */
+button, 
+.btn,
+.navbar-toggler {
+    min-height: 44px;
+    min-width: 44px;
+}
+
+/* Better Text Readability on Mobile */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+
+    .modal-title {
+        font-size: 1.2rem;
+    }
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+    color: white;
+    padding: 0.7rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: var(--accent-color);
+    color: white;
+    transform: translateX(-5px);
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .navbar-collapse {
+        background-color: var(--primary-color);
+        padding: 1rem;
+        border-radius: 10px;
+        margin-top: 1rem;
+    }
+
+    .navbar-nav {
+        margin-bottom: 1rem !important;
+    }
+
+    .nav-item {
+        margin: 0.5rem 0;
+    }
+
+    .dropdown-menu {
+        background-color: var(--secondary-color);
+        margin-top: 0;
+        padding: 0;
+    }
+
+    .dropdown-item {
+        padding: 0.8rem 1.5rem;
+        border-radius: 0;
+    }
+
+    .navbar-toggler {
+        border: none;
+        padding: 0.6rem;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+
+    .nav-link {
+        padding: 0.8rem 1rem;
+        border-radius: 5px;
+    }
+
+    .nav-link:hover {
+        background-color: var(--accent-color);
+    }
+}
+
+/* Better Touch Targets for Mobile Navigation */
+@media (max-width: 768px) {
+    .nav-link,
+    .dropdown-item {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-toggler {
+        min-width: 44px;
+        min-height: 44px;
+    }
+}
